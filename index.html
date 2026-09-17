@@ -174,8 +174,37 @@
   .plan li svg{flex:0 0 16px;width:16px;height:16px;margin-top:4px;color:var(--maroon)}
   .plans__note{margin-top:20px;font-size:.88rem;color:rgba(250,241,202,.86)}
 
-  /* --- отзывы (заглушка) --- */
+  /* --- тикер клиентов (идея из референса Logo Marquee) --- */
+  .ticker{margin-top:clamp(28px,4vw,46px);padding-top:18px;border-top:1px solid var(--line)}
+  .ticker__label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .ticker__mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .ticker__track{display:flex;gap:46px;width:max-content;animation:tick 36s linear infinite}
+  .ticker:hover .ticker__track,.ticker:focus-within .ticker__track{animation-play-state:paused}
+  .ticker__track span{font-family:"Playfair Display",serif;font-size:1.12rem;color:var(--maroon);opacity:.7;white-space:nowrap}
+  .ticker__track span::after{content:"·";margin-left:46px;opacity:.45}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.ticker__track{animation:none;flex-wrap:wrap;gap:14px;width:auto}}
+  @media (max-width:640px){.ticker__track span{font-size:.98rem}}
+
+  /* --- сравнение тарифов (идея из референса Feature Comparison Table) --- */
+  .cmp-wrap{margin-top:30px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.cmp{width:100%;min-width:560px;border-collapse:collapse;font-size:.92rem}
+  .cmp th,.cmp td{padding:13px 16px;border-bottom:1px solid rgba(250,241,202,.2);text-align:left}
+  .cmp thead th{font-family:"Playfair Display",serif;font-size:1.02rem;color:var(--cream);border-bottom-color:rgba(250,241,202,.45)}
+  .cmp thead th:nth-child(n+2),.cmp td{text-align:center}
+  .cmp tbody th{font-weight:500;color:rgba(250,241,202,.82)}
+  .cmp td{color:var(--cream);font-variant-numeric:tabular-nums}
+  .cmp .is-best{background:rgba(250,241,202,.09)}
+  .cmp .yes{color:#9fe6b4}
+  .cmp .no{color:rgba(250,241,202,.4)}
+  .cmp caption{caption-side:bottom;padding-top:14px;text-align:left;font-size:.84rem;color:rgba(250,241,202,.65)}
+
+  /* --- отзывы: выделенная цитата + карточки --- */
   .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .quote{grid-column:1/-1;position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px 28px;margin:0}
+  .quote::before{content:"“";position:absolute;top:14px;left:24px;font-family:"Playfair Display",serif;font-size:5.4rem;line-height:1;color:rgba(102,8,38,.16)}
+  .quote blockquote{margin:0;position:relative;font-family:"Playfair Display",serif;font-size:clamp(1.1rem,1.9vw,1.5rem);line-height:1.35;color:var(--maroon);max-width:70ch}
+  .quote figcaption{margin-top:18px;font-size:.9rem;color:var(--muted)}
   .review{border:1px dashed rgba(102,8,38,.4);border-radius:var(--radius);padding:24px;background:rgba(255,255,255,.35)}
   .review b{display:block;font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.05rem;margin-bottom:8px}
   .review span{font-size:.85rem;color:var(--muted)}
@@ -221,6 +250,10 @@
     .metrics,.cases,.cards,.steps,.plans,.reviews{display:block!important}
     .case,.card,.step,.plan,.metric,.review{margin-bottom:12px}
     .case__media{max-height:200px;overflow:hidden}
+    .ticker__track{animation:none;flex-wrap:wrap;gap:14px;width:auto}
+    .cmp-wrap{overflow:visible}
+    table.cmp{min-width:0;font-size:9pt}
+    .cmp th,.cmp td{padding:6px 9px}
     .hero{padding:20px 0!important}
     h1{font-size:32pt!important}
     h2{font-size:19pt!important}
@@ -285,6 +318,16 @@
         <div class="metric"><b data-count="58">0</b><span>унікальних запитів у дірект за місяць — кейс школи англійської для дітей</span></div>
         <div class="metric"><b data-count="2781">0</b><span>підписників за 9 місяців — бутик білизни BODIUM (стартували з 6)</span></div>
         <div class="metric"><b data-count="663">0</b><span>підписники за 6 місяців — онлайн-школа англійської з нуля</span></div>
+      </div>
+
+      <div class="ticker">
+        <div class="ticker__label">Проєкти, які вела</div>
+        <div class="ticker__mask">
+          <div class="ticker__track">
+            <span>TWICE ADVICE</span><span>BODIUM</span><span>THE GOOD PLACE</span><span>Мультимовна школа</span><span>Легалізація в Польщі</span><span>Особистий бренд · бьюті</span><span>Особистий бренд · навчання</span><span>Школа англійської для дітей</span>
+            <span aria-hidden="true">TWICE ADVICE</span><span aria-hidden="true">BODIUM</span><span aria-hidden="true">THE GOOD PLACE</span><span aria-hidden="true">Мультимовна школа</span><span aria-hidden="true">Легалізація в Польщі</span><span aria-hidden="true">Особистий бренд · бьюті</span><span aria-hidden="true">Особистий бренд · навчання</span><span aria-hidden="true">Школа англійської для дітей</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -598,6 +641,29 @@
         </div>
       </div>
       <p class="plans__note">Рекламний бюджет платформи оплачується окремо. Умови старту, кількість правок і формат зйомок узгоджуємо на зустрічі.</p>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <caption>Дані з чинного прайсу. Якщо потрібен інший обсяг — збираємо індивідуальний пакет під проєкт.</caption>
+          <thead>
+            <tr><th scope="col">Що входить</th><th scope="col">Pro Start</th><th scope="col" class="is-best">Growth</th><th scope="col">Full Scale</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Стратегія просування</th><td>розробка в перший місяць</td><td class="is-best no">—</td><td class="no">—</td></tr>
+            <tr><th scope="row">Reels</th><td>4</td><td class="is-best">6</td><td>10</td></tr>
+            <tr><th scope="row">Пости-каруселі</th><td>8</td><td class="is-best">10</td><td>12</td></tr>
+            <tr><th scope="row">Дописи з фото та текстом</th><td class="no">—</td><td class="is-best">10</td><td>12</td></tr>
+            <tr><th scope="row">Сториз</th><td>50–60</td><td class="is-best">70–80</td><td>100–110</td></tr>
+            <tr><th scope="row">Контент-план і копірайтинг</th><td class="yes">✓</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Дизайн і монтаж</th><td class="yes">✓</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Щомісячна звітність</th><td class="yes">✓</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Аналітика: дашборд KPI, CTR за Reels</th><td class="no">—</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Співпраця з таргетологом</th><td class="yes">✓</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Проєкт-менеджмент з таргетологом</th><td class="no">—</td><td class="is-best no">—</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Пошук підрядників</th><td class="yes">✓</td><td class="is-best yes">✓</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -611,7 +677,10 @@
         </div>
       </div>
       <div class="reviews">
-        <div class="review reveal"><b>Відгук 1</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
+        <figure class="quote reveal">
+          <blockquote>Тут буде головний відгук клієнта — 2–4 речення про результат у цифрах, а не «все сподобалось».</blockquote>
+          <figcaption>Ім'я · ніша · період співпраці — <em>заповнюється після отримання відгуку</em></figcaption>
+        </figure>
         <div class="review reveal"><b>Відгук 2</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
         <div class="review reveal"><b>Відгук 3</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
       </div>
