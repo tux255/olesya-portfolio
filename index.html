@@ -208,6 +208,25 @@
     .reveal{transition:none}
   }
 
+  /* --- печать / PDF: всё видимо, блоки не рвутся пополам --- */
+  @media print{
+    html.js .reveal{opacity:1!important;transform:none!important}
+    #bar,#lb,.nav,.filters{display:none!important}
+    body{background:#fff}
+    section{padding:26px 0!important;break-inside:avoid;page-break-inside:avoid}
+    .case,.card,.step,.plan,.metric,.review{break-inside:avoid;page-break-inside:avoid;box-shadow:none!important}
+    .sky,.cream{background:#fff}
+    .maroon{background:var(--maroon)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .plan{background:#fff!important}
+    .metrics,.cases,.cards,.steps,.plans,.reviews{display:block!important}
+    .case,.card,.step,.plan,.metric,.review{margin-bottom:12px}
+    .case__media{max-height:200px;overflow:hidden}
+    .hero{padding:20px 0!important}
+    h1{font-size:32pt!important}
+    h2{font-size:19pt!important}
+    a{text-decoration:none;color:var(--maroon)}
+  }
+
   /* лайтбокс */
   #lb{position:fixed;inset:0;background:rgba(32,22,26,.9);display:none;place-content:center;z-index:70;padding:24px;cursor:zoom-out}
   #lb.on{display:grid}
