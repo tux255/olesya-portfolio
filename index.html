@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Олеся Алексєєнко — SMM для шкіл, локального бізнесу та особистих брендів</title>
+<meta name="description" content="SMM-спеціалістка повного циклу: стратегія, контент, Reels, інфлюенс, аналітика. 58 унікальних запитів у дірект за місяць. Кейси: школи, бутіки, особисті бренди.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root{
+    --maroon:#660826;
+    --maroon-ink:#4a0519;
+    --cream:#faf1ca;
+    --sky:#d9f0ff;
+    --ink:#20161a;
+    --muted:#6b5a60;
+    --line:rgba(102,8,38,.18);
+    --card:#fffdf3;
+    --radius:18px;
+    --maxw:1140px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--sky);
+    color:var(--ink);
+    font:400 17px/1.6 Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.08;margin:0;letter-spacing:-.01em}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .hand{font-family:Caveat,cursive;font-size:1.5em;line-height:1;color:var(--maroon)}
+
+  /* --- прогресс чтения --- */
+  #bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--maroon);z-index:60;transition:width .1s linear}
+
+  /* --- навигация --- */
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(217,240,255,.82);border-bottom:1px solid var(--line)}
+  .nav__in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 22px;max-width:var(--maxw);margin:0 auto}
+  .nav__brand{font-family:"Playfair Display",serif;font-weight:700;font-size:1.05rem;color:var(--maroon);white-space:nowrap}
+  .nav__links{display:flex;gap:20px;font-size:.92rem;font-weight:500}
+  .nav__links a{text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:border-color .2s var(--ease)}
+  .nav__links a:hover{border-color:var(--maroon)}
+  .nav__cta{
+    background:var(--maroon);color:var(--cream)!important;text-decoration:none;padding:10px 18px;border-radius:999px;
+    font-weight:600;font-size:.92rem;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .2s var(--ease)
+  }
+  .nav__cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(102,8,38,.24)}
+  @media(max-width:860px){.nav__links{display:none}}
+  @media(max-width:520px){
+    .nav__in{padding:10px 14px;gap:10px}
+    .nav__brand{font-size:.95rem}
+    .nav__cta{padding:9px 13px;font-size:.82rem}
+    .hero__cta{flex-direction:column;align-items:stretch}
+    .hero__cta .btn{justify-content:center;width:100%}
+    .hero__portrait{aspect-ratio:auto;padding:22px}
+  }
+
+
+  /* --- hero --- */
+  .hero{position:relative;padding:clamp(48px,7vw,96px) 0 clamp(30px,5vw,56px);overflow:hidden}
+  .hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);align-items:center}
+  @media(max-width:900px){.hero__grid{grid-template-columns:1fr}}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon)}
+  .kicker::before{content:"";width:34px;height:1px;background:var(--maroon);display:block}
+  .hero h1{font-size:clamp(2.6rem,7vw,5.1rem);margin:18px 0 0;color:var(--maroon)}
+  .hero h1 em{font-style:normal;display:block;font-family:Caveat,cursive;font-size:.52em;color:var(--ink);margin-top:.35em;font-weight:600}
+  .hero p.lead{font-size:clamp(1rem,1.6vw,1.18rem);max-width:56ch;margin:22px 0 0;color:#3b2a30}
+  .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;cursor:pointer;border:1px solid transparent;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s}
+  .btn--primary{background:var(--maroon);color:var(--cream)}
+  .btn--primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(102,8,38,.28)}
+  .btn--ghost{border-color:var(--maroon);color:var(--maroon);background:transparent}
+  .btn--ghost:hover{background:rgba(102,8,38,.06)}
+  .hero__portrait{position:relative;aspect-ratio:4/5;border-radius:26px;background:linear-gradient(160deg,var(--cream),#f3e2b6);border:1px solid var(--line);display:grid;place-content:center;text-align:center;padding:26px;box-shadow:0 26px 60px rgba(102,8,38,.13)}
+  .hero__portrait span{display:block;color:var(--maroon);font-weight:600}
+  .hero__portrait small{display:block;margin-top:14px;color:var(--muted);font-size:.76rem;max-width:30ch;margin-inline:auto;line-height:1.5}
+  .facts{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:8px;text-align:left}
+  .facts li{background:rgba(102,8,38,.06);border-radius:10px;padding:10px 14px;font-size:.92rem;color:#4a373d}
+  .facts b{font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.05rem}
+
+  /* --- метрики --- */
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(30px,4vw,52px)}
+  @media(max-width:760px){.metrics{grid-template-columns:1fr}}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;justify-content:flex-start}
+  .metric b{display:block;font-family:"Playfair Display",serif;font-size:clamp(2rem,3.6vw,2.9rem);color:var(--maroon);line-height:1}
+  .metric span{display:block;margin-top:8px;font-size:.92rem;color:var(--muted)}
+
+  /* --- секции --- */
+  section{padding:clamp(56px,7vw,104px) 0}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(26px,3vw,44px)}
+  .sec-head h2{font-size:clamp(1.8rem,3.6vw,2.9rem);color:var(--maroon)}
+  .sec-head p{margin:8px 0 0;max-width:62ch;color:#463338}
+  .sky{background:var(--sky)}
+  .cream{background:var(--cream)}
+  .maroon{background:var(--maroon);color:var(--cream)}
+  .maroon h2,.maroon h3{color:var(--cream)}
+  .maroon .sec-head p{color:rgba(250,241,202,.82)}
+
+  /* --- карточки --- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(102,8,38,.12)}
+  .card h3{font-size:1.18rem;color:var(--maroon);margin-bottom:8px}
+  .card p{margin:0;font-size:.95rem;color:#4a373d}
+  .card .ico{width:38px;height:38px;border-radius:11px;background:rgba(102,8,38,.09);display:grid;place-content:center;color:var(--maroon);margin-bottom:14px}
+  .card .ico svg{width:20px;height:20px}
+
+  /* --- звёздный блок --- */
+  .star{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(250,241,202,.24);border-radius:var(--radius);overflow:hidden;margin-top:26px}
+  @media(max-width:800px){.star{grid-template-columns:1fr}}
+  .star div{background:var(--maroon);padding:26px}
+  .star b{display:block;font-family:"Playfair Display",serif;font-size:1.5rem;margin-bottom:6px}
+  .star span{font-size:.92rem;color:rgba(250,241,202,.8)}
+
+  /* --- услуги --- */
+  .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:s}
+  .svc li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:.95rem;display:flex;gap:12px;align-items:flex-start}
+  .svc li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:"Playfair Display",serif;color:var(--maroon);font-weight:700;opacity:.65}
+  .svc{padding:0;margin:0}
+
+  /* --- кейсы --- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .chip{border:1px solid var(--maroon);background:transparent;color:var(--maroon);border-radius:999px;padding:8px 16px;font:600 .86rem Manrope,sans-serif;cursor:pointer;transition:background .2s,color .2s}
+  .chip[aria-pressed="true"],.chip:hover{background:var(--maroon);color:var(--cream)}
+  .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .case__media{aspect-ratio:16/9;background:var(--maroon);overflow:hidden;cursor:zoom-in}
+  .case__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+  .case__media:hover img{transform:scale(1.04)}
+  .case__body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .case__tag{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .case h3{font-size:1.24rem;color:var(--maroon)}
+  .case__nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+  .case__nums div{background:rgba(102,8,38,.06);border-radius:10px;padding:10px 12px}
+  .case__nums b{display:block;font-family:"Playfair Display",serif;font-size:1.25rem;color:var(--maroon)}
+  .case__nums span{font-size:.76rem;color:var(--muted)}
+  .case p{margin:0;font-size:.93rem;color:#4a373d}
+  .case__did{font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px}
+  .case.is-hidden{display:none}
+
+  /* --- шаги --- */
+  .steps{display:grid;gap:14px;counter-reset:st}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+  .step::before{counter-increment:st;content:"0" counter(st);font-family:"Playfair Display",serif;font-size:1.7rem;color:var(--maroon);opacity:.55;line-height:1}
+  .step h3{font-size:1.12rem;color:var(--maroon);margin-bottom:6px}
+  .step p{margin:0;font-size:.94rem;color:#4a373d}
+
+  /* --- тарифы --- */
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:start}
+  .plan{background:var(--cream);color:var(--ink);border-radius:var(--radius);padding:28px;border:1px solid var(--line);position:relative;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+  .plan:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(102,8,38,.14)}
+  .plan--best{outline:2px solid var(--cream);outline-offset:-1px;background:#fff8dd}
+  .plan__badge{position:absolute;top:-12px;left:26px;background:var(--maroon);color:var(--cream);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .plan h3{color:var(--maroon);font-size:1.5rem}
+  .plan__price{font-family:"Playfair Display",serif;font-size:2.4rem;color:var(--maroon);margin:10px 0 2px}
+  .plan__uah{font-size:.86rem;color:var(--muted);margin-bottom:16px}
+  .plan ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:9px;font-size:.93rem}
+  .plan li{display:flex;gap:10px;align-items:flex-start}
+  .plan li svg{flex:0 0 16px;width:16px;height:16px;margin-top:4px;color:var(--maroon)}
+  .plans__note{margin-top:20px;font-size:.88rem;color:rgba(250,241,202,.86)}
+
+  /* --- отзывы (заглушка) --- */
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .review{border:1px dashed rgba(102,8,38,.4);border-radius:var(--radius);padding:24px;background:rgba(255,255,255,.35)}
+  .review b{display:block;font-family:"Playfair Display",serif;color:var(--maroon);font-size:1.05rem;margin-bottom:8px}
+  .review span{font-size:.85rem;color:var(--muted)}
+
+  /* --- faq --- */
+  details.faq{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:10px}
+  details.faq summary{cursor:pointer;font-weight:600;color:var(--maroon);list-style:none}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"+";float:right;font-size:1.3rem;line-height:1;color:var(--maroon)}
+  details.faq[open] summary::after{content:"–"}
+  details.faq p{margin:12px 0 0;font-size:.94rem;color:#4a373d}
+
+  /* --- финальный CTA --- */
+  .final{text-align:center}
+  .final h2{font-size:clamp(2rem,4.6vw,3.4rem)}
+  .final .hero__cta{justify-content:center;margin-top:28px}
+  .final .links{margin-top:26px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-weight:600;font-size:.95rem}
+  .final .links a{text-decoration:none;border-bottom:1px solid rgba(250,241,202,.5);padding-bottom:2px}
+  footer{padding:32px 0 46px;font-size:.82rem;color:rgba(250,241,202,.7);text-align:center}
+
+  /* --- анимации появления --- */
+  html.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  html.js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html.js .reveal{opacity:1;transform:none;transition:none}
+    *{animation:none!important;transition:none!important}
+  }
+  /* прогрессивное улучшение: если браузер умеет scroll-driven анимации */
+  @supports (animation-timeline: view()){
+    .reveal{transition:none}
+  }
+
+  /* лайтбокс */
+  #lb{position:fixed;inset:0;background:rgba(32,22,26,.9);display:none;place-content:center;z-index:70;padding:24px;cursor:zoom-out}
+  #lb.on{display:grid}
+  #lb img{max-width:min(1100px,94vw);max-height:88vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header class="nav">
+  <div class="nav__in">
+    <div class="nav__brand">Олеся Алексєєнко</div>
+    <nav class="nav__links">
+      <a href="#clients">З ким працюю</a>
+      <a href="#cases">Кейси</a>
+      <a href="#process">Як я працюю</a>
+      <a href="#plans">Тарифи</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Обговорити проєкт</a>
+  </div>
+</header>
+
+<main>
+  <!-- 1. HERO -->
+  <section class="hero sky">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div>
+          <span class="kicker">SMM-спеціалістка · 4 роки досвіду · 20+ проєктів</span>
+          <h1>Соцмережі, з яких<br>приходять заявки
+            <em>не «просто ведення», а система: стратегія → контент → Reels → інфлюенс → аналітика</em>
+          </h1>
+          <p class="lead">Веду проєкти, які продають довірою: школи та освітні проєкти, локальний бізнес, особисті бренди експертів. Беру під ключ — від позиціонування до заявок у дірект.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">Обговорити проєкт
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#cases">Дивитись кейси</a>
+          </div>
+        </div>
+        <div class="hero__portrait">
+          <span class="hand">smm-спеціалістка</span>
+          <span style="font-family:'Playfair Display',serif;font-size:1.7rem;margin-top:8px">Алексєєнко<br>Олеся</span>
+          <ul class="facts">
+            <li><b>4 роки</b> у SMM</li>
+            <li><b>20+ проєктів</b></li>
+            <li><b>8 ніш</b></li>
+            <li><b>6 з 10</b> кейсів — освіта</li>
+          </ul>
+          <small>TWICE ADVICE · BODIUM · THE GOOD PLACE та інші</small>
+        </div>
+      </div>
+
+      <div class="metrics reveal">
+        <div class="metric"><b data-count="58">0</b><span>унікальних запитів у дірект за місяць — кейс школи англійської для дітей</span></div>
+        <div class="metric"><b data-count="2781">0</b><span>підписників за 9 місяців — бутик білизни BODIUM (стартували з 6)</span></div>
+        <div class="metric"><b data-count="663">0</b><span>підписники за 6 місяців — онлайн-школа англійської з нуля</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. КЛИЕНТЫ -->
+  <section id="clients" class="cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>З ким працюю</h2>
+          <p>Три ніші, у яких уже є доказаний результат і готові процеси.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div>
+          <h3>Школи та освітні проєкти</h3>
+          <p>Мовні школи, дитячі школи, освітні компанії, онлайн-курси. Ядро моїх кейсів: 6 з 10 проєктів — освіта.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-6h4v6"/></svg></div>
+          <h3>Локальний бізнес</h3>
+          <p>Бутіки, студії, магазини з офлайн-точкою: контент, який приводить людей в магазин і в дірект.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></div>
+          <h3>Особисті бренди експертів</h3>
+          <p>Бьюті, навчання, експерти-практики: позиціонування, візуальна концепція, PR-сторінка.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. УСЛУГИ -->
+  <section class="sky">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Що я роблю</h2>
+          <p>Повний цикл — від позиціонування до звіту з цифрами.</p>
+        </div>
+      </div>
+      <ul class="svc reveal">
+        <li>Стратегія та позиціонування у соцмережах</li>
+        <li>Контент-план і рубрикатор</li>
+        <li>Копірайтинг, рерайтинг, сторітелінги</li>
+        <li>Дизайн постів, каруселей і сторіс</li>
+        <li>Reels: сценарій, референси, монтаж</li>
+        <li>Налаштування та оформлення профілю, хайлайтс</li>
+        <li>Візуальна концепція та ToV бренду</li>
+        <li>Таргет-супровід і робота з рекламним кабінетом</li>
+        <li>Інфлюенс-маркетинг і робота з блогерами</li>
+        <li>Аналітика: охоплення, переходи, заявки, KPI-дашборд</li>
+        <li>Пошук підрядників і продакшн-супровід</li>
+        <li>Щомісячна звітність з висновками</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. ЗВЁЗДНЫЙ БЛОК -->
+  <section class="maroon">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Результат, який видно не тільки в цифрах</h2>
+          <p>Найсильніший кейс портфоліо — бутик білизни BODIUM.</p>
+        </div>
+      </div>
+      <div class="star reveal">
+        <div><b>Тіна Кароль</b><span>зйомка в топі у бренду, представленого в магазині, з відміткою бутику</span></div>
+        <div><b>Надя Дорофєєва</b><span>боді з BODIUM у кліпі «747»; бутик вказано спонсором кліпу на сторінках Наді та Алана Бадоєва</span></div>
+        <div><b>500%</b><span>окупність співпраці з блогером</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. КЕЙСЫ -->
+  <section id="cases" class="cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Кейси</h2>
+          <p>Формат один: що було → що зробила → результат у цифрах. Клік по зображенню — збільшити.</p>
+        </div>
+      </div>
+
+      <div class="filters" role="group" aria-label="Фільтр кейсів">
+        <button class="chip" data-f="all" aria-pressed="true">Усі</button>
+        <button class="chip" data-f="edu" aria-pressed="false">Освіта</button>
+        <button class="chip" data-f="local" aria-pressed="false">Локальний бізнес</button>
+        <button class="chip" data-f="person" aria-pressed="false">Особисті бренди</button>
+      </div>
+
+      <div class="cases" id="casesGrid">
+
+        <article class="case reveal" data-cat="edu">
+          <div class="case__media" data-img="assets/case-03.jpg"><img src="assets/case-03.jpg" alt="Кейс TWICE ADVICE — динаміка профілю до і після ведення" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Освітня компанія · вступ до закордонних вишів</span>
+            <h3>TWICE ADVICE</h3>
+            <div class="case__nums">
+              <div><b>22 → 1 414</b><span>підписників за 1 рік 9 місяців</span></div>
+              <div><b>105 305</b><span>переглядів за 90 днів</span></div>
+              <div><b>+153%</b><span>відвідувань профілю</span></div>
+            </div>
+            <p>Найкращий Reels — 219 833 перегляди, 633 дії в профілі. 81% переглядів прийшли з рекомендацій.</p>
+            <p class="case__did">Стратегія · контент-план · візуальна концепція · ToV · рубрикатор · хайлайтс · дизайн сторіс і постів · монтаж відео · співпраця з таргетологом · сторітелінги · копірайтинг</p>
+            <p><b>Результат:</b> постійні заявки в дірект і ліди.</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="local">
+          <div class="case__media" data-img="assets/case-09.jpg"><img src="assets/case-09.jpg" alt="Кейс BODIUM — профіль до і через 9 місяців ведення" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Бутик білизни · локальний бізнес</span>
+            <h3>BODIUM</h3>
+            <div class="case__nums">
+              <div><b>6 → 2 781</b><span>підписників за 9 місяців</span></div>
+              <div><b>32 769</b><span>охоплених акаунтів/міс</span></div>
+              <div><b>+75%</b><span>дій у профілі</span></div>
+            </div>
+            <p>110 795 переглядів за місяць, 9 970 відвідувань профілю. Окупність співпраці з блогером — 500%.</p>
+            <p class="case__did">Стратегія · контент-план · візуальна концепція · ToV · інфлюенс-маркетинг · таргет · сторітелінги · дизайн · монтаж</p>
+            <p><b>Результат:</b> постійні заявки в дірект, зацікавлення товарами, співпраці з топовими блогерами.</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="edu">
+          <div class="case__media" data-img="assets/case-19.jpg"><img src="assets/case-19.jpg" alt="Кейс THE GOOD PLACE — профіль до і через 6 місяців" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Онлайн-школа англійської · з нуля</span>
+            <h3>THE GOOD PLACE</h3>
+            <div class="case__nums">
+              <div><b>0 → 663</b><span>підписників за 6 місяців</span></div>
+              <div><b>+177%</b><span>охоплення за 14 днів</span></div>
+              <div><b>+297%</b><span>акаунтів у взаємодії</span></div>
+            </div>
+            <p>Профіль запущено з нуля: аватарка, біо, візуал. Reels без таргету — 4 256 і 19 360 переглядів, 23 кліки в біо з одного ролика.</p>
+            <p class="case__did">Стратегія · контент-план · копірайтинг · візуальна концепція · ToV · сторітелінги · дизайн · монтаж · налаштування рекламного кабінету</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="edu">
+          <div class="case__media" data-img="assets/case-29.jpg"><img src="assets/case-29.jpg" alt="Кейс мультимовної школи — статистика охоплення" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Мультимовна школа · зміна візуальної концепції</span>
+            <h3>Мультимовна школа</h3>
+            <div class="case__nums">
+              <div><b>711 → 1 535</b><span>підписників (3 → 5 місяців)</span></div>
+              <div><b>221 728</b><span>переглядів</span></div>
+              <div><b>+1 185,4%</b><span>охоплених акаунтів</span></div>
+            </div>
+            <p>Перезапуск візуальної концепції дав 80 801 охоплених акаунтів за період.</p>
+            <p class="case__did">Ребрендинг візуалу · стратегія · контент-план · дизайн · монтаж · таргет</p>
+            <p><b>Результат:</b> постійні заявки в дірект і ліди.</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="edu">
+          <div class="case__media" data-img="assets/case-43.jpg"><img src="assets/case-43.jpg" alt="Кейс школи англійської — охоплення за 90 днів" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Школа англійської · органіка без таргету</span>
+            <h3>Школа англійської</h3>
+            <div class="case__nums">
+              <div><b>4 514</b><span>охоплених акаунтів (+80,5%)</span></div>
+              <div><b>55 048</b><span>показів за 90 днів</span></div>
+              <div><b>+68,9%</b><span>підписників</span></div>
+            </div>
+            <p>Розподіл показів: Reels 4 073 · дописи 2 344 · сторіс 1 299. Топ-пост — 2 619 переглядів.</p>
+            <p class="case__did">Стратегія · контент-план · копірайтинг · візуальна концепція · ToV · сторітелінги · дизайн · монтаж · налаштування рекламного кабінету</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="edu">
+          <div class="case__media" data-img="assets/case-51.jpg"><img src="assets/case-51.jpg" alt="Кейс школи англійської для дітей — 58 запитів у дірект" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Школа англійської для дітей · продажі</span>
+            <h3>58 запитів у дірект за місяць</h3>
+            <div class="case__nums">
+              <div><b>58</b><span>унікальних запитів у дірект (01.11–01.12)</span></div>
+              <div><b>48 727</b><span>охоплених акаунтів (+77,7%)</span></div>
+              <div><b>+94%</b><span>дій у профілі</span></div>
+            </div>
+            <p>144 296 переглядів за місяць, 2 429 дій у профілі, 2 395 відвідувань профілю. Органічний пост без таргету: 385 лайків, 385 коментарів, 108 репостів.</p>
+            <p class="case__did">Дизайн сторіс і постів · монтаж · співпраця з таргетологом · інфлюенс · сторітелінги · копірайтинг</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="person">
+          <div class="case__media" data-img="assets/case-16.jpg"><img src="assets/case-16.jpg" alt="Кейс особистого бренду — статистика" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Локальний бізнес · інфлюенс</span>
+            <h3>Інфлюенс-кампанії BODIUM</h3>
+            <div class="case__nums">
+              <div><b>10 257</b><span>дій у профілі за місяць</span></div>
+              <div><b>9 970</b><span>відвідувань профілю</span></div>
+              <div><b>500%</b><span>окупність блогера</span></div>
+            </div>
+            <p>Пошук блогерів, домовленості, контроль результату. Найкращі співпраці дали згадки в топових акаунтах і кліпі.</p>
+            <p class="case__did">Інфлюенс-маркетинг · таргет · аналітика · контент</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="person">
+          <div class="case__media" data-img="assets/case-35.jpg"><img src="assets/case-35.jpg" alt="Особистий бренд у бьюти — дизайн постів" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Особистий бренд · бьюті</span>
+            <h3>Особистий бренд (бьюті)</h3>
+            <p>Дизайн сторіс і постів, монтаж відео, пошук ідей, аналіз конкурентів, ведення PR-сторінки, макети для таргету.</p>
+            <p class="case__did">Візуал · контент · PR-сторінка · макети для таргету</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="person">
+          <div class="case__media" data-img="assets/case-39.jpg"><img src="assets/case-39.jpg" alt="Особистий бренд у навчанні — дизайн постів" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Особистий бренд · навчання</span>
+            <h3>Особистий бренд (навчання)</h3>
+            <p>Візуальна концепція, дизайн сторіс і постів, монтаж відео.</p>
+            <p class="case__did">Концепція · дизайн · монтаж</p>
+          </div>
+        </article>
+
+        <article class="case reveal" data-cat="local">
+          <div class="case__media" data-img="assets/case-30.jpg"><img src="assets/case-30.jpg" alt="Кейс легалізації в Польщі — сторіс" loading="lazy"></div>
+          <div class="case__body">
+            <span class="case__tag">Послуги · легалізація в Польщі</span>
+            <h3>Легалізація в Польщі</h3>
+            <p>Сторіс-контент під послугу з високою ціною рішення.</p>
+            <p class="case__did">Сторітелінги · дизайн сторіс · копірайтинг</p>
+            <p><b>Результат:</b> постійні заявки в дірект і ліди.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ПРОЦЕСС -->
+  <section id="process" class="sky">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Як я працюю</h2>
+          <p>Шість кроків від першої розмови до звіту з цифрами.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div><h3>Знайомство — 20–30 хвилин у Zoom</h3><p>Цілі, ніша, поточні цифри, ресурси. Кажу чесно, що дасть найбільший ріст у вашому випадку.</p></div></div>
+        <div class="step reveal"><div><h3>Аудит і стратегія</h3><p>Аналіз профілю та конкурентів, позиціонування, ToV, рубрикатор, план на 1–3 місяці.</p></div></div>
+        <div class="step reveal"><div><h3>Візуальна концепція та оформлення</h3><p>Дизайн-система постів і сторіс, хайлайтс, обкладинки Reels.</p></div></div>
+        <div class="step reveal"><div><h3>Продакшн</h3><p>Контент-план → копірайтинг → дизайн → Reels → постинг за погодженим графіком.</p></div></div>
+        <div class="step reveal"><div><h3>Ріст і реклама</h3><p>Інфлюенс, таргет-супровід, експерименти з форматами, робота з відгуками.</p></div></div>
+        <div class="step reveal"><div><h3>Звітність</h3><p>Раз на місяць — цифри: охоплення, переходи в профіль, заявки. Що працює, що міняємо.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ТАРИФЫ -->
+  <section id="plans" class="maroon">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Тарифи</h2>
+          <p>Три формати співпраці. Обсяг контенту вказано за місяць.</p>
+        </div>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Pro Start</h3>
+          <div class="plan__price">550 $</div>
+          <div class="plan__uah">≈ 24 500 грн/міс</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Стратегія просування в перший місяць</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>4 Reels</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>8 графічних постів-каруселей</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>50–60 сториз</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Контент-план, копірайтинг, рерайтинг</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Оформлення та монтаж контенту, дизайн</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Щомісячна звітність, аналітика в Instagram</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Співпраця з таргетологом, пошук підрядників</li>
+          </ul>
+        </div>
+        <div class="plan plan--best reveal">
+          <span class="plan__badge">Найчастіше обирають</span>
+          <h3>Growth</h3>
+          <div class="plan__price">750 $</div>
+          <div class="plan__uah">≈ 33 450 грн/міс</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Усе з Pro Start у більшому обсязі</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>6 Reels</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>10 графічних постів-каруселей</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>10 дописів з фото та текстом</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>70–80 сториз</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Розширена аналітика: дашборд KPI, CTR за Reels</li>
+          </ul>
+        </div>
+        <div class="plan reveal">
+          <h3>Full Scale</h3>
+          <div class="plan__price">950 $</div>
+          <div class="plan__uah">≈ 42 370 грн/міс</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Усе з Growth у максимальному обсязі</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>10 Reels</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>12 графічних постів-каруселей</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>12 дописів з фото та текстом</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>100–110 сториз</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Проєкт-менеджмент з таргетологом</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Розширена аналітика: дашборд KPI, CTR за Reels</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plans__note">Рекламний бюджет платформи оплачується окремо. Умови старту, кількість правок і формат зйомок узгоджуємо на зустрічі.</p>
+    </div>
+  </section>
+
+  <!-- 8. ОТЗЫВЫ -->
+  <section class="cream">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Відгуки клієнтів</h2>
+          <p>Тут будуть три реальні відгуки — місце вже готове.</p>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="review reveal"><b>Відгук 1</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
+        <div class="review reveal"><b>Відгук 2</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
+        <div class="review reveal"><b>Відгук 3</b><span>Назва клієнта · ніша · 2–4 речення про результат</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section id="faq" class="sky">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Часті питання</h2></div></div>
+      <details class="faq"><summary>Коли ви можете почати?</summary><p>Старт можливий з першого числа наступного місяця або раніше, якщо є вільний слот. Кількість проєктів у роботі обмежена — тому якість не страждає.</p></details>
+      <details class="faq"><summary>Хто робить зйомки?</summary><p>Контент-план, копірайтинг, дизайн, монтаж і постинг — на мені. Зйомки: або ви надаєте матеріал, або підключаємо перевіреного фотографа/відеографа; пошук підрядників входить у тариф.</p></details>
+      <details class="faq"><summary>Чи потрібен таргет?</summary><p>Органіка дає базу й довіру, реклама — швидший обсяг заявок. Я працюю в зв'язці з таргетологом (у тарифах є співпраця або проєкт-менеджмент) і готую макети для кампаній.</p></details>
+      <details class="faq"><summary>Скільки правок входить?</summary><p>Правки в межах погодженого обсягу — безкоштовно. Контент погоджуємо наперед: ви бачите пост до публікації.</p></details>
+      <details class="faq"><summary>Як я розумію, що робота має сенс?</summary><p>Раз на місяць ви отримуєте звіт із цифрами: охоплення, переходи в профіль, заявки в дірект, динаміка по рубриках. Не «стало краще», а конкретні числа.</p></details>
+    </div>
+  </section>
+
+  <!-- 10. CTA -->
+  <section id="contact" class="maroon final">
+    <div class="wrap">
+      <h2>Обговоримо ваш проєкт?</h2>
+      <p style="max-width:60ch;margin:16px auto 0;color:rgba(250,241,202,.86)">Розкажіть про проєкт у дірект — надішлю кейси під вашу нішу та вільні слоти на місяць. Або почнемо з короткої розмови в Zoom.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" style="background:var(--cream);color:var(--maroon)" href="https://instagram.com/olesia_aleksieienko" target="_blank" rel="noopener">Написати в дірект</a>
+        <a class="btn btn--ghost" style="border-color:var(--cream);color:var(--cream)" href="https://instagram.com/olesia.aleksieienko" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="links">
+        <a href="https://instagram.com/olesia.aleksieienko" target="_blank" rel="noopener">@olesia.aleksieienko</a>
+        <a href="https://instagram.com/olesia_aleksieienko" target="_blank" rel="noopener">@olesia_aleksieienko</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="maroon">
+  <div class="wrap">
+    Олеся Алексєєнко · SMM-спеціалістка · 4 роки досвіду · 20+ проєктів<br>
+    Цифри в кейсах — реальні показники Instagram Insights проєктів, які я вела.
+  </div>
+</footer>
+
+<div id="lb" role="dialog" aria-label="Збільшене зображення"><img alt=""></div>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* прогресс */
+  var bar = document.getElementById('bar');
+  function onScroll(){
+    var h = document.documentElement;
+    var p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+    bar.style.width = (p*100).toFixed(2) + '%';
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* появление */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el, i){ el.style.transitionDelay = (Math.min(i%4,3)*70)+'ms'; io.observe(el); });
+
+  /* счётчики */
+  var counted = new WeakSet();
+  function fmt(n){ return n.toLocaleString('uk-UA').replace(/\u00a0/g,' '); }
+  var io2 = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting || counted.has(e.target)) return;
+      counted.add(e.target);
+      var el = e.target, to = parseInt(el.dataset.count,10), t0 = performance.now(), dur = reduce?0:1100;
+      (function tick(t){
+        var k = dur ? Math.min((t-t0)/dur,1) : 1;
+        el.textContent = fmt(Math.round(to * (1-Math.pow(1-k,3))));
+        if(k<1) requestAnimationFrame(tick);
+      })(t0);
+    });
+  }, {threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){ io2.observe(el); });
+
+  /* фильтр кейсов */
+  var chips = document.querySelectorAll('.chip');
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', String(x===c)); });
+      var f = c.dataset.f;
+      document.querySelectorAll('.case').forEach(function(card){
+        card.classList.toggle('is-hidden', !(f==='all' || card.dataset.cat===f));
+      });
+    });
+  });
+
+  /* лайтбокс */
+  var lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('.case__media').forEach(function(m){
+    m.addEventListener('click', function(){
+      lbImg.src = m.dataset.img || m.querySelector('img').src;
+      lb.classList.add('on');
+    });
+  });
+  function close(){ lb.classList.remove('on'); lbImg.src=''; }
+  lb.addEventListener('click', close);
+  addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+</body>
+</html>
